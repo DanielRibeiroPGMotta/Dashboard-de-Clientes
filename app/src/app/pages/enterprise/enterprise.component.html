@@ -1,0 +1,29 @@
+
+
+  <div class="search-bar-layout">
+    <mat-form-field class="search-bar" appearance="inline">
+      <mat-label>Encontre o empreendimento</mat-label>
+      <input
+        matInput
+        [(ngModel)]="searchTerm"
+        (ngModelChange)="onSearchTermChange()"
+      />
+      <mat-icon matSuffix>search</mat-icon>
+    </mat-form-field>
+  </div>
+
+  <div class="enterprise-container">
+  <mat-card
+    *ngFor="let enterprise of enterprises"
+    class="mat-elevation content-card"
+  >
+    <mat-card-title> {{ enterprise.name }} </mat-card-title>
+    <img mat-card-image class="img-card" src="{{ enterprise.image_src }}" />
+    <mat-card-content>
+      Quantidade de Propriedades: {{ enterprise.realties  }}
+    </mat-card-content>
+    <mat-card-actions>
+     
+    </mat-card-actions>
+  </mat-card>
+</div>

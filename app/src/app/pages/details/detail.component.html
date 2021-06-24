@@ -1,0 +1,38 @@
+<div  *ngFor="let clientTotal of clientsTotals" class="enterprise-container">
+    <mat-card class="frame-box mat-elevation-z5">
+      <mat-card-subtitle>Total de Empreendimentos</mat-card-subtitle>
+      <mat-card-title>{{ clientTotal.totalEnterprises }}</mat-card-title>
+    </mat-card>
+    <mat-card class="frame-box mat-elevation-z5">
+      <mat-card-subtitle>Total de Propriedades</mat-card-subtitle>
+      <mat-card-title>{{ clientTotal.totalRealties }}</mat-card-title>
+    </mat-card>
+  </div>
+  
+  
+    <div class="search-bar-layout">
+      <mat-form-field class="search-bar-field" appearance="outline">
+        <mat-label>Pesquisa por nome</mat-label>
+        <input
+          matInput
+          [(ngModel)]="searchTerm"
+          (ngModelChange)="onSearchTermChange()"
+        />
+        <mat-icon matSuffix>search</mat-icon>
+      </mat-form-field>
+    </div>
+  
+    <div class="enterprise-container">
+    <mat-card
+      *ngFor="let enterprise of enterprises"
+      class="mat-elevation-z5 content-card"
+    >
+      <mat-card-title> {{ enterprise.name }} </mat-card-title>
+      <img mat-card-image class="img-card" src="{{ enterprise.image_src }}" />
+      <mat-card-content>
+        Quantidade de Propriedades: {{ client.realties }}
+      </mat-card-content>
+  
+    </mat-card>
+  </div>
+  

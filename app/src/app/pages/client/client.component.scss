@@ -1,0 +1,47 @@
+.clients-layout {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.search-bar-layout {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.search-bar-field {
+  width: 500px;
+}
+
+.img-card {
+  width: 200px;
+  height: auto;
+}
+
+.content-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 260px;
+  height: auto;
+  margin: 1em;
+}
+
+.clients-frames {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.frame-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 150px;
+  margin: 2vh;
+}

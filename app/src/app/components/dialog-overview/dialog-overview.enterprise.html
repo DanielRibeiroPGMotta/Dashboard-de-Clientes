@@ -1,0 +1,30 @@
+<div class="modal-container" *ngFor="let enteprisesById of enterprisesById">
+    <h1 mat-dialog-title>{{ enterpriseById.name }}</h1>
+    <img mat-card-image class="img-enterprise" src="{{ enterpriseById.image_src }}" />
+    <div
+      mat-dialog-content
+      class="clients-frames"
+      *ngFor="let totals of clientsTotalsById"
+    >
+      <mat-card class="frame-box mat-elevation-z5">
+
+      </mat-card>
+      <mat-card class="frame-box mat-elevation-z5">
+        <mat-card-subtitle>Total de Propriedades</mat-card-subtitle>
+        <mat-card-title>{{ totals.totalRealties }}</mat-card-title>
+      </mat-card>
+    </div>
+    <div class="enterprises-dialog-layout" mat-dialog-content>
+      <mat-card
+        *ngFor="let enterprise of ClientsEnterprisesById"
+        class="mat-elevation-z5 content-enterprises-card"
+      >
+        <mat-card-title> {{ enterprise.name }} </mat-card-title>
+    
+      </mat-card>
+    </div>
+    <div mat-dialog-actions class="dialog-actions">
+      <button mat-button (click)="onNoClick()">Close</button>
+    </div>
+  </div>
+  

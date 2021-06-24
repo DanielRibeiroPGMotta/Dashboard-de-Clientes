@@ -1,0 +1,38 @@
+.enterprise-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .img-card {
+    width: 250px;
+    height: auto;
+  }
+  
+  .search-bar-layout {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  
+  .content-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 320px;
+    height: auto;
+    margin: 1em;
+  }
+  
+  .searchbar-enterprise-layout {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  
+  .searchbar-enterprise-field {
+    width: 400px;
+  }
+  

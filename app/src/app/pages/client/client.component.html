@@ -1,0 +1,45 @@
+<div *ngFor="let clientTotal of clientsTotals" class="clients-frames">
+  <mat-card class="frame-box mat-elevation-z5">
+    <mat-card-subtitle>Total de Clientes</mat-card-subtitle>
+    <mat-card-title>{{ clientTotal.totalClients }}</mat-card-title>
+  </mat-card>
+  <mat-card class="frame-box mat-elevation-z5">
+    <mat-card-subtitle>Total de Empreendimentos</mat-card-subtitle>
+    <mat-card-title>{{ clientTotal.totalEnterprises }}</mat-card-title>
+  </mat-card>
+  <mat-card class="frame-box mat-elevation-z5">
+    <mat-card-subtitle>Total de Propriedades</mat-card-subtitle>
+    <mat-card-title>{{ clientTotal.totalRealties }}</mat-card-title>
+  </mat-card>
+</div>
+
+<div class="search-bar-layout">
+  <mat-form-field class="search-bar-field" appearance="outline">
+    <mat-label>Encontre seu cliente</mat-label>
+    <input
+      matInput
+      [(ngModel)]="searchTerm"
+      (ngModelChange)="onSearchTermChange()"
+    />
+    <mat-icon matSuffix>search</mat-icon>
+  </mat-form-field>
+</div>
+
+<div class="clients-layout">
+  <mat-card
+    *ngFor="let client of clients$ | async"
+    class="mat-elevation-z5 content-card"
+  >
+    <mat-card-title> {{ client.name }} </mat-card-title>
+    <img mat-card-image class="img-card" src="{{ client.image_src }}" />
+    <mat-card-content>
+      Quantidade de empreendimentos: {{ client.enterprises.length }}
+    </mat-card-content>
+    <mat-card-actions>
+      <a routerLink="/detail"> </a>
+      <button mat-button  (click)="openDialog(client._id)">Mais Detalhes
+      
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>
